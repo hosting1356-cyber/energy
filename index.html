@@ -1,0 +1,653 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Energy Revolution System | Slash Your Electric Bill</title>
+
+<meta name="description" content="Discover the Energy Revolution System blueprint that thousands of Americans are using to reduce electricity costs and prepare for power outages.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0f0f0f;
+color:white;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(to bottom,#000,#111);
+}
+
+.hero h1{
+font-size:60px;
+color:#ffd000;
+margin-bottom:20px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:24px;
+max-width:900px;
+margin:auto;
+color:#ddd;
+}
+
+.cta-btn{
+display:inline-block;
+margin-top:35px;
+padding:22px 50px;
+background:#ffd000;
+color:#000;
+font-size:28px;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+box-shadow:0 5px 0 #a88b00;
+transition:0.3s;
+animation:pulse 1.5s infinite;
+}
+
+.cta-btn:hover{
+transform:scale(1.05);
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+}
+
+.timer{
+margin-top:25px;
+font-size:28px;
+color:#ff4d4d;
+font-weight:bold;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.section-dark{
+background:#151515;
+}
+
+.section h2{
+font-size:45px;
+margin-bottom:30px;
+color:#ffd000;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#1f1f1f;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#ffd000;
+font-size:28px;
+}
+
+.card p{
+font-size:18px;
+color:#ddd;
+}
+
+.testimonial{
+background:#202020;
+padding:30px;
+border-left:5px solid #ffd000;
+border-radius:10px;
+}
+
+.faq{
+margin-top:25px;
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+}
+
+.faq h3{
+color:#ffd000;
+margin-bottom:10px;
+}
+
+.footer{
+padding:40px 20px;
+text-align:center;
+background:#000;
+color:#999;
+font-size:14px;
+}
+
+/* Popup */
+
+.popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+backdrop-filter:blur(5px);
+}
+
+.popup-box{
+background:white;
+color:black;
+width:700px;
+max-width:90%;
+padding:40px;
+border:5px solid red;
+border-radius:10px;
+text-align:center;
+position:relative;
+animation:popup 0.4s ease;
+}
+
+@keyframes popup{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.popup-box h1{
+font-size:65px;
+color:red;
+margin-bottom:20px;
+}
+
+.popup-box p{
+font-size:24px;
+margin-bottom:20px;
+}
+
+.close-btn{
+position:absolute;
+right:15px;
+top:15px;
+font-size:35px;
+cursor:pointer;
+color:red;
+font-weight:bold;
+}
+
+.popup-btn{
+display:inline-block;
+padding:20px 35px;
+background:#ffd000;
+color:black;
+font-size:26px;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+margin-top:15px;
+animation:pulse 1.5s infinite;
+}
+
+.bullet-list{
+margin-top:30px;
+text-align:left;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.bullet-list li{
+list-style:none;
+font-size:22px;
+margin-bottom:15px;
+color:#ddd;
+}
+
+.trust-bar{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+font-size:20px;
+color:#ccc;
+}
+
+a{
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.cta-btn{
+font-size:22px;
+padding:18px 30px;
+}
+
+.section h2{
+font-size:32px;
+}
+
+.popup-box h1{
+font-size:45px;
+}
+
+.popup-box p{
+font-size:18px;
+}
+
+.bullet-list li{
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- POPUP -->
+
+<div class="popup-overlay" id="popup">
+
+<div class="popup-box">
+
+<div class="close-btn" onclick="closePopup()">×</div>
+
+<h1>WAIT!</h1>
+
+<p>
+⚡ Tesla's Forgotten Energy Blueprint Is Going Viral Again...
+</p>
+
+<p>
+✅ Thousands of Americans are discovering a DIY system that may help reduce monthly electricity costs.
+</p>
+
+<a href="https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs" class="popup-btn">
+🔥 SHOW ME THE BLUEPRINT
+</a>
+
+</div>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>
+⚡ Slash Your Electricity Bills Before The Next Energy Crisis Hits
+</h1>
+
+<p>
+Discover the controversial DIY energy blueprint inspired by Nikola Tesla concepts that thousands are using to reduce dependence on expensive utility companies.
+</p>
+
+<a href="https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs" class="cta-btn">
+🚀 WATCH THE FREE PRESENTATION
+</a>
+
+<div class="timer">
+⏳ Offer Expires In:
+<span id="countdown">15:00</span>
+</div>
+
+<ul class="bullet-list">
+
+<li>✅ Beginner Friendly DIY Guide</li>
+
+<li>⚡ Learn Alternative Energy Concepts</li>
+
+<li>🔋 Prepare For Emergency Blackouts</li>
+
+<li>💰 Discover Low-Cost Backup Power Ideas</li>
+
+<li>🛠 Step-By-Step Video Tutorials Included</li>
+
+</ul>
+
+<div class="trust-bar">
+
+<span>🔒 Secure Checkout</span>
+<span>💳 ClickBank Protected</span>
+<span>📱 Mobile Friendly</span>
+<span>⭐ USA Trending Offer</span>
+
+</div>
+
+</div>
+</section>
+
+<!-- BENEFITS -->
+
+<section class="section section-dark">
+
+<div class="container">
+
+<h2>🔥 Why Americans Are Talking About This</h2>
+
+<div class="grid">
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>✅ Reduce Energy Costs</h3>
+
+<p>
+Learn how homeowners are building backup energy systems using affordable materials.
+</p>
+
+</div>
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>⚡ Emergency Preparedness</h3>
+
+<p>
+Prepare your home for blackouts, storms, and rising electricity prices.
+</p>
+
+</div>
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>🛠 DIY Friendly</h3>
+
+<p>
+Includes beginner-friendly diagrams, tutorials, and setup instructions.
+</p>
+
+</div>
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>🔋 Backup Power Ideas</h3>
+
+<p>
+Discover alternative ways people are preparing for unexpected power failures.
+</p>
+
+</div>
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>💰 Budget Friendly</h3>
+
+<p>
+Uses low-cost materials instead of expensive commercial systems.
+</p>
+
+</div>
+
+<div class="card" onclick="window.location.href='https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs'">
+
+<h3>📘 Step-By-Step Blueprint</h3>
+
+<p>
+Simple instructions designed for beginners and homeowners.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>⭐ Real User Experiences</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+
+<p>
+"✅ I was skeptical at first, but the guide gave me a much better understanding of off-grid energy options."
+</p>
+
+<br>
+
+<strong>- Michael, Texas</strong>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"⚡ With energy prices rising, I wanted a backup plan for emergencies. This was surprisingly informative."
+</p>
+
+<br>
+
+<strong>- Jennifer, Florida</strong>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"🛠 The tutorials were easy to follow and made the whole process less intimidating."
+</p>
+
+<br>
+
+<strong>- Robert, Arizona</strong>
+
+</div>
+
+</div>
+
+<div style="text-align:center;">
+
+<a href="https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs" class="cta-btn">
+🔥 START WATCHING NOW
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section section-dark">
+
+<div class="container" style="text-align:center;">
+
+<h2>🚀 Watch The Presentation Before It Gets Removed</h2>
+
+<p style="font-size:24px;max-width:900px;margin:auto;">
+The full video explains the system, materials needed, and how the blueprint works.
+</p>
+
+<a href="https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs" class="cta-btn">
+🔥 ACCESS THE VIDEO NOW
+</a>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<h3>✅ Is this a physical product?</h3>
+
+<p>
+No. It is a digital guide with blueprints and tutorials.
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>🛠 Do I need technical experience?</h3>
+
+<p>
+The tutorials are designed for beginners and DIY enthusiasts.
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>⚡ How do I access it?</h3>
+
+<p>
+After purchase, access is delivered digitally online.
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>💵 Is there a refund policy?</h3>
+
+<p>
+Purchases are processed through ClickBank which typically includes a refund window.
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>📱 Can I view it on mobile?</h3>
+
+<p>
+Yes. The guide can be accessed from phones, tablets, and computers.
+</p>
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+
+<a href="https://theenergyrevolution.net/cb_redirect.php?&shield=03b373i9t-hq0p09yoihcqcmfs" class="cta-btn">
+⚡ GET INSTANT ACCESS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<p>
+DISCLAIMER: This website is not affiliated with Tesla Inc. Results vary by individual. This page is for informational and promotional purposes only.
+</p>
+
+<br>
+
+<p>
+© 2026 Energy Guide Landing Page
+</p>
+
+</footer>
+
+<script>
+
+window.onload = function(){
+
+setTimeout(function(){
+
+document.getElementById("popup").style.display = "flex";
+
+},4000);
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display = "none";
+
+}
+
+let time = 900;
+
+setInterval(function(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+seconds = seconds < 10 ? "0" + seconds : seconds;
+
+document.getElementById("countdown").innerHTML = minutes + ":" + seconds;
+
+if(time > 0){
+time--;
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>
